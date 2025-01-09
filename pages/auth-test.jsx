@@ -5,7 +5,7 @@ export default function Component() {
   if (session) {
     return (
       <>
-        Signed in as {session.user.email} <br />
+        Signed in as {session.user.email} ({session.user.name})<br />
         {session.user.image && <img src={session.user.image}/>}
         <button onClick={() => signOut()}>Sign out</button>
       </>
