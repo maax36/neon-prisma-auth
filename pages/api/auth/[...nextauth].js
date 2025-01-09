@@ -1,10 +1,15 @@
 import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
-import CredentialsProvider from "next-auth/providers/credentials"
+import CredentialsProvider from "next-auth/providers/credentials";
+import VkProvider from "next-auth/providers/vk";
 
 export const authOptions = {
   // Configure one or more authentication providers
   providers: [
+    VkProvider({
+      clientId: process.env.VK_CLIENT_ID,
+      clientSecret: process.env.VK_CLIENT_SECRET
+    }),
     GithubProvider({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
