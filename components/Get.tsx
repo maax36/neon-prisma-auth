@@ -21,7 +21,7 @@ export function Get({ onMutate, onDelete }: GetProps) {
 
   onMutate(mutate);
 
-  if (error) return "An error has occurred.";
+  if (error) return "An error has occurred..";
   if (isLoading) return "Loading...";
   console.log(data);
   return (
