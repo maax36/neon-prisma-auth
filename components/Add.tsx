@@ -15,7 +15,7 @@ export function Add({ newtodo }: {newtodo: (text: string) => void}) {
     <div className={styles.add}>
       <input
         type="text"
-        placeholder="Введите текст"
+        placeholder="Введите текст..."
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
